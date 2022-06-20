@@ -1,0 +1,195 @@
+header {
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border-color:lightgray;
+    height: 10%;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+h1 {
+    text-align: center;
+}
+body {
+    background-color: gainsboro;
+    color:black;
+}
+label {
+    text-decoration: none;
+}
+.body_field {
+    background-color: lightgreen;
+    color:black;
+}
+.container_login {
+    background-color:ghostwhite;
+    border: 2px solid grey;
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10%;
+    border-color:lightgray;
+    padding: 30px;
+}
+.container_registration {
+    background-color:ghostwhite;
+    border: 2px solid grey;
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10%;
+    border-color:lightgray;
+    padding: 30px;
+}
+.table_name {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.input {
+    display: inline-block;
+    width: 270px;
+    padding: 15px;
+    margin: 20px auto 20px auto;
+    border-radius: 10px;
+    border: none;
+    background: #f1f1f1;
+    
+}
+.btn_login {
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background-color: lightgreen;
+    margin: 0px 0px 0px 0px;
+}
+.btn_register {
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background-color: lightgreen;
+    margin: 20px 0 20px 0;
+}
+.input_name {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.btn_name {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #000;
+}
+.btn_login:hover, .btn_register:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 10px;
+}
+.guest {
+    display: block;
+    margin-left: 90px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:rgb(2, 171, 171);
+}
+.guest:hover {
+  color: rgb(0, 60, 60);  
+}
+.error {
+    color: red;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.numbers {
+    background-color: lightblue;
+    border: black solid 3px;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 490px;
+}
+.field {
+    background-color: lightblue;
+    border-radius: 10px;
+    width: 500px;
+    border: black solid 3px;
+    margin-bottom: 30px;
+}
+.output {
+    display: block;
+    background-color: lightblue;
+    border-radius: 10px;
+    border: black solid 3px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin: 15px 10px;
+    max-width: 800px;
+}
+.field_buttons {
+
+    background-color: lightblue;
+    border-radius: 10px;
+    border: black solid 3px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: black;
+    height: 50px;
+    width: 300px;
+    margin: 10px 10px;
+    padding: 5px;
+}
+.btn {
+    background-color: ghostwhite;
+    border-radius: 10px;
+    border: black solid 3px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    color: black;
+    height: 30px;
+    width: 80px;
+    margin: 10px 7px;
+    padding: 5px;
+}
+.gameStatus {
+    background-color: lightblue;
+    border-radius: 10px;
+    border: black solid 3px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: black;
+    height: 150px;
+    width: 300px;
+    margin-left:10px;
+    margin-top: 10px;
+    padding: 5px;
+}
+.win {
+    color: darkgreen;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.common_text {
+    color: black;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

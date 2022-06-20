@@ -1,0 +1,4 @@
+POST localhost:8080/api/comment
+Content-Type: application/json
+
+{ "game": "game", "player": "Man", "comment": null, "commentedOn": "2022-04-13T14:45:04.448+00:00"}

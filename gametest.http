@@ -1,0 +1,4 @@
+POST localhost:8080/api/score
+Content-Type: application/json
+
+{ "game": "game", "player": "Proger", "points": 100, "playedOn": "2022-04-13T14:43:04.448+00:00"}

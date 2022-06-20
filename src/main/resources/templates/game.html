@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <title>Jigsaw sudoku</title>
+</head>
+<body class="body_field">
+<div>
+    <div class="field" th:if="not ${@gameController.isLose} and not ${@gameController.isWon}">
+        <span th:utext="${@gameController.getHtmlField} "></span>
+    </div>
+    <div class="numbers" th:if="not ${@gameController.isLose} and not ${@gameController.isWon}">
+        <span th:utext="${@gameController.getButtons}"></span>
+    </div>
+    <div class="gameStatus">
+        <span th:utext="${@gameController.gameStatus}"></span>
+        <label class="common_text">Average rating: <span th:text="${@gameController.getRating}"/></br></span></label>
+        <label th:if="${@userController.isLogged}">
+        <label class="common_text">Logged as: <label th:text="${@userController.getLoggedUser().getUsername()}"></label></label>
+</label>
+
+    </div>
+    <div class="field_buttons">
+        <a href="/game/new">
+            <button class="btn" type="submit">New Game</button>
+        </a>
+        <a href="/game/usePrompt">
+            <button class="btn" type="submit">Prompt</button>
+        </a>
+        <a href="/logout">
+            <button class="btn" type="submit">Log out</button>
+        </a>
+    </div>
+</div>
+<div class="output">
+    <span>Comments:  <br></span>
+    <span th:utext="${@gameController.printComments}"></span>
+</div>
+<div class="output">
+    <span>Ratings:  <br></span>
+    <span th:utext="${@gameController.printRatings}"></span>
+</div>
+<div class="output">
+    <span>Scores: <br></span>
+    <span th:utext="${@gameController.printScores}"></span>
+</div>
+<div th:if="${@gameController.isLose()}">
+    <span th:utext="${@gameController.printLose}"></span>
+</div>
+<div th:if="${@gameController.isWon()}">
+    <span th:utext="${@gameController.printWon}"></span>
+</div>
+<div th:if="${@gameController.isMistake()}">
+    <span class="error">Invalid input!</span>
+</div>
+
+<div class="form_comment">
+    <form th:if=" ${@userController.logged}" action="game/api/comment" method="post">
+        <div th:if="not ${@gameController.isCommented}">
+            <label class="common_text">You can write a comment :</label>
+            <input type="text" name="comment" placeholder="Comment"/>
+            <button class="btn" type="submit">Send</button>
+        </div>
+
+        <span class="common_text" th:if="${@gameController.isCommented}">Thank you! Your comment will help me in the future!</span>
+    </form>
+</div>
+
+<form th:if=" ${@userController.logged}" action="game/api/rating" method="post">
+    <div th:if="not ${@gameController.isRated}">
+        <label class="common_text">You can rate the game:</label>
+        <input class="input_field" type="number"
+               placeholder="Rating"
+               name="rating" min="0"
+               max="5">
+        <button class="btn" type="submit">Send</button>
+    </div>
+
+    <span class="common_text" th:if="${@gameController.isRated}">Thank you! Your feedback will help me in the future!</span>
+</form>
+
+</body>
+</html>

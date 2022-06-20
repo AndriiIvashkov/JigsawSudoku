@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Jigsaw sudoku</title>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body> 
+    <header>
+        <h1>Jigsaw sudoku</h1>
+    </header>
+    <div class="container_login">
+        <span class="table_name">Login form</br></span>
+        <form th:action="@{/login}" th:object="${login_user}" method="post" >
+            <label class="input_name">Login</br></label>
+            <input th:field="*{username}" type="text" class="input" placeholder="Enter your login">
+            <label class="input_name">Password</br></label>
+            <input th:field="*{password}" type="password" class="input" placeholder="Enter your password">
+            <button type="submit" class="btn_login"><a class="btn_name">Login</a></button>
+        </form>
+        <form th:action="@{/register}" method="get">
+            <button type="submit" class="btn_register"><a class="btn_name">Register</a></button>
+        </form>
+
+
+        <p th:if="${usernameLoginError != null}" class="error"></p>
+        <a class="guest" href="game">Enter as guest</a>
+    </div>
+</body>
+</html>

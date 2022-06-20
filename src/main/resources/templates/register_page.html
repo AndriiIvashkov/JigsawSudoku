@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jigsaw sudoku</title>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Jigsaw sudoku</h1>
+    </header>
+    <div class="container_registration">
+        <span class="table_name">Registration form</br></span>
+        <form th:object="${login_user}" method="post">
+            <label class="input_name"><b>Login</b></label>
+            <input th:field="*{username}" type="text" class="input" placeholder="Enter your login">
+            <label class="input_name"><b>Password</b></label>
+            <input th:field="*{password}" type="password" class="input" placeholder="Enter your password">
+            <label class="input_name"><b>Repeat password</b></label>
+            <input th:field="*{verifiedPassword}" type="password" class="input" placeholder="Repeat your password">
+            <button type="submit" class="btn_register"><a class="btn_name">Register</a></button>
+        </form>
+        <p th:if="${lengthPassError != null}" class="error">Your password has less than 5 signs</p>
+        <p th:if="${verifiedPassError != null}" class="error">Your passwords are different</p>
+        <p th:if="${usernameError != null}" class="error">This username already used</p>
+    </div>
+</body>
+</html>
